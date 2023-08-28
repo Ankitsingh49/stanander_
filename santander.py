@@ -12,9 +12,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import StandardScaler
 
 
-filename = "lgbmlightnew.pkl"
-filename2 = 'logestic_for_tran.pkl'
-filename3 = 'naive_for_tran.pkl'
+filename = "lightgbm.pkl"
+filename2 = 'logestic.pkl'
+filename3 = 'naive.pkl'
 
 
 
@@ -29,7 +29,7 @@ with open( filename, "rb") as pickle_light:
     model_light = pickle.load(pickle_light)
 
 with open( filename2, 'rb') as pickle_logestic:
-    model_logestic = pickle.load(pickle_logestic)
+    model_logestic = pickle.load(pickle_logestic )
 
 with open( filename3, 'rb') as pickle_naive:
     model_naive = pickle.load(pickle_naive)
