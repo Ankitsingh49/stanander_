@@ -17,7 +17,7 @@ app.mount("/static", StaticFiles(directory="static"), name = "static")
 
 @app.get("/")
 def get_index(request: Request):
-    return templates.TemplateResponse("santander.html", {"request": request})
+    return templates.TemplateResponse("santander_templates.html", {"request": request})
 
 
 # Santander transaction prediction 
