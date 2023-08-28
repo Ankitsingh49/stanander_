@@ -12,15 +12,15 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import StandardScaler
 
 
-filename = r"routers\lgbmlightnew.pkl"
-filename2 = r'routers\logestic_for_tran.pkl'
-filename3 = r'routers\naive_for_tran.pkl'
+filename = "lgbmlightnew.pkl"
+filename2 = 'logestic_for_tran.pkl'
+filename3 = 'naive_for_tran.pkl'
 
 
 
 router = APIRouter()
 
-templates =  Jinja2Templates(directory= "templates")
+templates =  Jinja2Templates(directory="templates" )
 standard =  StandardScaler()
 
 

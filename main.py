@@ -7,7 +7,7 @@ from fastapi.templating import Jinja2Templates
 from starlette.staticfiles import StaticFiles
 
 
-from routers import santander
+import santander
 
 
 app = FastAPI()
