@@ -26,7 +26,7 @@ standard =  StandardScaler()
 
 
 with open( filename, "rb") as pickle_light:
-    model_light = cloudpickle.load(pickle_light)
+    model_light = pickle.load(pickle_light)
 
 with open( filename2, 'rb') as pickle_logestic:
     model_logestic = pickle.load(pickle_logestic)
