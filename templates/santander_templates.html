@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/first_app/css/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/first_app/css/bootstrap.css') }}">
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Santander </title>
+
+</head>
+<style>
+    /* Global styles for the body */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Styling for the navigation bar */
+    .navbar {
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6a12b));
+        color: white;
+
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+    .container {
+            margin-top: 70px; /* Adjust this value to create spacing between navbar and content */
+        }
+
+</style>
+
+
+   
+<div>
+    <nav class="navbar navbar-expand-md navbar-dark main-color fixed-top">
+        <a class="navbar-brand" href="#">BOMBAY BANYAN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home </a>
+                </li>
+            
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+
+
+
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Santander Customer Transaction Prediction (Only top 10 features are taken here, read more about Project in INDEPTH section)
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/" id="myForm">
+                    <div class="form-group">
+                        <label>VARIABLE_1 </label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_1"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_2</label>
+                        <input type="number"  step="0.0001" class="form-control" name="VAR_2"
+                                  required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_3</label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_3"
+                                  required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_4</label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_4"
+                                  required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_5</label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_5"
+                                  required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_6</label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_6"
+                                  required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_7</label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_7"
+                                  required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_8</label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_8"
+                                  required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_9</label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_9"
+                                  required>
+                    </div>
+                    <div class="form-group">
+                        <label>VARIABLE_10</label>
+                        <input type="number" step="0.0001" class="form-control" name="VAR_10"
+                                  required>
+                    </div>
+                    
+                    
+                    
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                </form>
+                
+                <div class="output"> output here</div>
+                <div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="offerModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="offerModalLabel">TRY Our New Service!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Offer details can go here -->
+                                Would you like to try our new service called 'RTGS', which provides instant money transfer to any bank account within a minute.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">TRY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="noofferModal" tabindex="-1" role="dialog" aria-labelledby="offerModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="offerModalLabel">Special Offer for You!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Offer details can go here -->
+                                Congratulations! You're eligible for a special offer on your next transaction. Please check your email for more details.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Claim Offer</button>
+                                <button type="button" class="btn btn-primary">More Offers</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    // Get the form element
+                    const form = document.getElementById("myForm");
+                
+                    // Get the output element
+                    const outputElement = document.querySelector(".output");
+                
+                    // Add an event listener for form submission
+                    form.addEventListener("submit", async (event) => {
+                        event.preventDefault();
+                
+                        // Fetch the form data
+                        const formData = new FormData(form);
+                
+                        // Send a POST request to the server with the form data
+                        const response = await fetch("/", {
+                            method: "POST",
+                            body: formData
+                        });
+                
+                        // Get the response text
+                        const text = await response.text();
+                
+                        // Check if the response indicates a potential transaction
+                        if (text === "CUSTOMER MIGHT TRANSACT") {
+                            // Open the offer modal
+                            $('#offerModal').modal('show');
+                
+                            // Add an event listener for when the offer modal is closed
+                            $('#offerModal').on('hidden.bs.modal', function () {
+                                outputElement.innerHTML = text;
+                            });
+                        } else {
+                            // Open the no transaction modal
+                            $('#noofferModal').modal('show');
+                
+                            // Add an event listener for when the no transaction modal is closed
+                            $('#noofferModal').on('hidden.bs.modal', function () {
+                                outputElement.innerHTML = text;
+                            });
+                        }
+                    });
+                </script>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    
+
+ 
+
+
+
+
+
+
+<script src="{{ url_for('static', path='/first_app/js/jquery-slim.js') }}"></script>
+<script src="{{ url_for('static', path='/first_app/js/popper.js') }}"></script>
+<script src="{{ url_for('static', path='/first_app/js/bootstrap.js') }}"></script>
+</body>
+</html>
