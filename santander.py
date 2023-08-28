@@ -4,7 +4,7 @@ from pydantic import BaseModel , Field
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import pickle 
-import cloudpickle 
+ 
 from fastapi import APIRouter , Depends, Form, Request
 import numpy as np 
 from sklearn.preprocessing import StandardScaler 
